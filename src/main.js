@@ -11,6 +11,7 @@ import toastr from './setup/toastr'
 // bootstrap
 import 'bootstrap/scss/bootstrap.scss'
 import 'bootstrap'
+import 'font-awesome/css/font-awesome.css' 
 
 // setup toastr
 toastr();

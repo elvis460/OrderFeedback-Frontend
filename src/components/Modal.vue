@@ -15,11 +15,11 @@
 	            <div class="input-group">	
 					      <input type="text" placeholder="Leave a comment to the dish..." class="form-control" aria-label="Text input with dropdown button" v-model="item.comment">
 					      <div class="btn-group">
-					        <button type="button" class="btn btn-secondary btn-success" @click="rating(item, 1)">
-					          Good
+					        <button type="button" class="btn btn-secondary btn-primary" :class="{'btn-success': item.rating==1}" @click="rating(item, 1)">
+					          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 					        </button>
-					        <button type="button" class="btn btn-secondary btn-danger" @click="rating(item, -1)">
-					          Bad
+					        <button type="button" class="btn btn-secondary btn-primary" :class="{'btn-danger': item.rating==-1}" @click="rating(item, -1)">
+					          <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 					        </button>
 					      </div>
 					    </div>
@@ -30,11 +30,11 @@
 	            <div class="input-group">	
 					      <input type="text" placeholder="Leave a comment to the delivery..." class="form-control" aria-label="Text input with dropdown button" v-model="order.comment">
 					      <div class="btn-group">
-					        <button type="button" class="btn btn-secondary btn-success" @click="rating(order, 1)">
-					          Good
+					        <button type="button" class="btn btn-secondary btn-primary" :class="{'btn-success': order.rating==1}" @click="rating(order, 1)">
+					          <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
 					        </button>
-					        <button type="button" class="btn btn-secondary btn-danger" @click="rating(order, -1)">
-					          Bad
+					        <button type="button" class="btn btn-secondary btn-primary" :class="{'btn-danger': order.rating==-1}" @click="rating(order, -1)">
+					          <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
 					        </button>
 					      </div>
 					    </div>

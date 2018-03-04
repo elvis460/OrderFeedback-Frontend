@@ -1,9 +1,9 @@
 <template>
   <div class="col-md-12">
-    <table class="table" style="text-align:left"> 
+    <table class="table  table-hover" style="text-align:left"> 
       <thead class="thead-light"> 
         <tr> 
-          <th scope="col">#</th> 
+          <th scope="col">OrderID</th> 
           <th scope="col">Delivey Time</th> 
           <th scope="col">Feedback</th>
         </tr> 
@@ -13,8 +13,11 @@
           <th scope="row">{{order.order_id}}</th>
           <td>{{order.delivery_date}} - {{order.delivery_time}}</td> 
           <td>
-            <button type="button" v-if="order.feedback_submitted" class="btn btn-primary" @click="showFeedback(order.order_id)">Show Feedback</button>
-            <button type="button" v-if="!order.feedback_submitted" @click="order_detail=order" class="btn btn-primary" data-toggle="modal" data-target="#CreateFeedbackModal">Give Feedback</button>
+            <button type="button" v-if="order.feedback_submitted" class="btn btn-info" @click="showFeedback(order.order_id)">
+<i class="fa fa-info-circle" aria-hidden="true"></i>
+            </button>
+            <button type="button" v-if="!order.feedback_submitted" @click="order_detail=order" class="btn btn-success" data-toggle="modal" data-target="#CreateFeedbackModal"><i class="fa fa-pencil" aria-hidden="true"></i>
+            </button>
           </td> 
         </tr>
       </tbody> 
@@ -59,3 +62,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .table{
+    margin-top: 5%
+  }
+</style>
