@@ -10,9 +10,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.3.1",
     "tether": "^1.4.3",
+    "toastr": "^2.1.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
