@@ -13,7 +13,7 @@
           <th scope="row">{{order.order_id}}</th>
           <td>{{order.delivery_date}} - {{order.delivery_time}}</td> 
           <td>
-            <button type="button" v-if="order.feedback_submitted" class="btn btn-primary">Show Feedback</button>
+            <button type="button" v-if="order.feedback_submitted" class="btn btn-primary" @click="showFeedback(order.order_id)">Show Feedback</button>
             <button type="button" v-if="!order.feedback_submitted" @click="order_detail=order" class="btn btn-primary" data-toggle="modal" data-target="#CreateFeedbackModal">Give Feedback</button>
           </td> 
         </tr>
@@ -52,6 +52,9 @@ export default {
       .catch(function(error) {
         console.log('error:', error)
       });
+    },
+    showFeedback(order_id){
+      this.$router.push({ name: 'OrderFeedback', params: { order_id: order_id } })
     }
   }
 }

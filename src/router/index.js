@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Orders from '@/components/Orders'
-
+import OrderFeedback from '@/components/OrderFeedback'
 Vue.use(Router)
 
 export default new Router({
@@ -14,9 +14,10 @@ export default new Router({
       component: Orders
     },
     {
-      path: '/orders',
-      name: 'Orders',
-      component: Orders
+      path: '/orders/:order_id/feedbacks',
+      name: 'OrderFeedback',
+      component: OrderFeedback
     },
+
   ]
 })
