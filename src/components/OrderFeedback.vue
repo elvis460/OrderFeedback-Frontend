@@ -67,7 +67,7 @@ export default {
 	.rating-down{
 		color: red
 	}
-	.back-btn, .card-header, .card-footer{
+	.back-btn{
 		background-color: #F6F6F6
 	}
 
