@@ -14,7 +14,7 @@
           <td>{{order.delivery_date}} - {{order.delivery_time}}</td> 
           <td>
             <button type="button" v-if="order.feedback_submitted" class="btn btn-info" @click="showFeedback(order.order_id)">
-<i class="fa fa-info-circle" aria-hidden="true"></i>
+            <i class="fa fa-info-circle" aria-hidden="true"></i>
             </button>
             <button type="button" v-if="!order.feedback_submitted" @click="order_detail=order" class="btn btn-success" data-toggle="modal" data-target="#CreateFeedbackModal"><i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
@@ -28,6 +28,7 @@
 
 <script>
 import Modal from '@/components/Modal';
+import axios from 'axios'
 
 export default {
   name: 'Orders',
@@ -46,7 +47,7 @@ export default {
   methods:{
     getOrders(){
       const vm = this;
-      this.axios.get('/orders').then(function(response) {
+      axios.get('/orders').then(function(response) {
         if (response.status == 200) {
           vm.orders = response['data']['orders']
         } else {

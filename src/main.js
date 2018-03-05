@@ -21,9 +21,9 @@ Vue.config.productionTip = false
 // axios settings here
 Vue.prototype.axios = axios
 // dev api url
-axios.defaults.baseURL = 'http://localhost:3000'
+// axios.defaults.baseURL = 'http://localhost:3000'
 // production api url
-// axios.defaults.baseURL = 'https://grain-tech-test-backend.herokuapp.com'
+axios.defaults.baseURL = 'https://grain-tech-test-backend.herokuapp.com'
 // add request header in each request
 axios.defaults.headers.common['Auth-Token'] = 'Auth-Token'
 
