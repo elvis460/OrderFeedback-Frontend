@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "avoriaz": "^6.3.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.0.0-alpha.6",
     "cross-env": "^5.1.3",
     "express": "^4.16.2",
